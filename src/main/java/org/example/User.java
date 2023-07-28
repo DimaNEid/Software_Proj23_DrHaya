@@ -2,38 +2,26 @@ package org.example;
 
 public class User {
     private String id;
+    private String name;
+    private String username;
+    private String password;
 
-    public String getId() {
-        return id;
-    }
 
-    public void setId(String id) {
-        this.id = id;
-    }
+    public String getId() {return id;}
 
-    public String getName() {
-        return name;
-    }
+    public void setId(String id) {this.id = id;}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public String getName() {return name;}
 
-    public String getUsername() {
-        return username;
-    }
+    public void setName(String name) {this.name = name;}
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+    public String getUsername() {return username;}
 
-    public String getPassword() {
-        return password;
-    }
+    public void setUsername(String username) {this.username = username;}
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+    public String getPassword() {return password;}
+
+    public void setPassword(String password) {this.password = password;}
 
     public User(String id, String name, String username, String password) {
         this.id = id;
@@ -42,8 +30,13 @@ public class User {
         this.password = password;
     }
 
-    private String name;
-    private String username;
-    private String password;
+    @Override
+    public String toString(){
+        return '{'+"id =" + id +
+                ", name ='" + name + '\''+
+                ", username =" + username + '\'' +
+                ", password =" + password + '\'' + '}';
+    }
+
 
 }
