@@ -46,20 +46,6 @@ public class Tenant {
         return password;
     }
 
-    /*ArrayList<Order> orders = new ArrayList<>();
-    int numberOfOrders =0 ;
-
-    public void addOrder(Order order) {
-        this.orders.add(order);
-    }
-    public ArrayList<Order> getOrders() {
-        return this.orders;
-    }
-    void setNumberOfOrders(int num){
-        if(orders.isEmpty()) num = 0;
-        this.numberOfOrders = num;
-    }
-    int getNumberOfOrders(){
-        return numberOfOrders;
+}
     }*/
 }
