@@ -1,19 +1,41 @@
-package org.example;
-
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.io.*;
+import java.util.*;
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Scanner scanner = new Scanner(System.in);
+        int choice;
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+        while (true) {
+
+            System.out.println("------ Welcome to Sakankom Home Page ------");
+            System.out.println("|                                         |");
+            System.out.println("|          1. Sign up                     |");
+            System.out.println("|          2. Sign in                     |");
+            System.out.println("|          3. Exit                        |");
+            System.out.println("|                                         |");
+            System.out.println("-------------------------------------------\n");
+            System.out.print("Enter your choice: ");
+
+            while  (!scanner.hasNextInt()) {
+                System.out.println("Invalid input! Please enter a valid integer.");
+
+            }
+            choice=scanner.nextInt();
+            if (choice == 1)
+                System.out.println("------ u choosed 1 ------");
+
+
+                else if (choice == 2)
+                System.out.println("------ u choosed 2 ------");
+
+                else if ( choice == 3)
+                System.out.println("------ u choosed 3 ------");
+
+                else
+                System.out.println("Invalid input! Please enter a valid integer.");
+
+
         }
     }
 }
