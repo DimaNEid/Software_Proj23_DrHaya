@@ -4,24 +4,17 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import static org.example.Methods.*;
 
 
 public class Login {
-
-    public static List<Residence> residences = new ArrayList<>();
-    static Residence rr = new Residence();
-
-    public static List<House> houses = new ArrayList<>();
-    static House hh = new House();
-
-
-
 
 
     static Scanner menu_in = new Scanner(System.in);
 
     static Scanner scanner = new Scanner(System.in);
 
+   static Methods methodsObj = new Methods();
 
 
    private static void adminMethod(){
@@ -40,6 +33,8 @@ public class Login {
            System.out.println("3. Add House.");
            System.out.println("4. View All House.");
            System.out.println("5. Control Panel.");
+           System.out.println("6. Check The tenants for a certain house");
+           System.out.println("7. Check Number Of Communication");
 
 
            int choice = menu_in.nextInt();
@@ -47,7 +42,7 @@ public class Login {
 
            if (choice == 1) {
 
-               ResidenceMethods residenceMethodsObj = new ResidenceMethods();
+
 
                System.out.println("Add Resident ID");
                String input1 = scanner.nextLine();
@@ -68,80 +63,71 @@ public class Login {
                System.out.println("Add The Number Of Houses");
                Integer input6 = Integer.valueOf(scanner.nextLine());
 
-               Residence addResidence = residenceMethodsObj.addResidence(input1,input2,input3,input4,input5, input6);
+              /* Residence addResidence =*/ methodsObj.addResidence(input1,input2,input3,input4,input5, input6);
 
 
 
            } else if (choice == 2) {
 
                System.out.println("All your Residences: ");
+               viewResidences();
 
-               ResidenceMethods.printArrayList(residences);
 
-              /* for (int i = 0; i < residences.size(); i++) {
 
-                   System.out.println(residences.get(i).toString());
-               }*/
+              /* for (int i = 0; i < residences.size(); i++) {System.out.println(residences.get(i).toString());}*/
 
            } else if (choice == 3) {
 
                System.out.println("Add House ID");
                String input1 = scanner.nextLine();
-               hh.setHouseId(input1);
 
                System.out.println("Add The Resident ID that the house is located");
                String input2 = scanner.nextLine();
-               hh.setResidenceId(input2);
 
                System.out.println("Add The Floor ID that the house is located");
                String input3 = scanner.nextLine();
-               hh.setFloorId(input3);
 
                System.out.println("Add The Monthly Rent");
                String input4 = scanner.nextLine();
-               hh.setMonthlyRent((input4));
 
                System.out.println("Add number of bathrooms ");
                String input5 = scanner.nextLine();
-               hh.setBathroomsNum(Integer.valueOf(input5));
 
                System.out.println("Add number of bedrooms");
-               String input6 = scanner.nextLine();
-               hh.setBedroomsNum(Integer.valueOf(input6));
+               Integer input6 = Integer.valueOf(scanner.nextLine());
 
                System.out.println("Add if there is a balcony");
-               String input7 = scanner.nextLine();
-               hh.setBalcony((input7));
+               Integer input7 = Integer.valueOf(scanner.nextLine());
 
-               houses.add(hh);
+
+            methodsObj.addHouse(input1,input2,input3,input4,input5, input6, input7);
 
 
            } else if (choice == 4) {
 
                System.out.println("All your Houses: ");
+                viewHouses();
+
+               //for (int i = 0; i < houses.size(); i++) {System.out.println(houses.get(i).toString());}
 
 
-               for (int i = 0; i < houses.size(); i++) {
-
-                   System.out.println(houses.get(i).toString());
-               }
 
            } else if (choice == 5) {
 
                System.out.println("If You Would Like To Check The Dashboard");
+               viewResidenceID();
 
-               for (int i = 0; i < residences.size(); i++) {
-
-                   System.out.println(residences.get(i).getResidenceID());
-               }
+               /*for (int i = 0; i < residences.size(); i++) {System.out.println(residences.get(i).getResidenceID()); }*/
 
                System.out.println("Enter The Resident ID That You Would Like To See Its Details");
                String s = scanner.nextLine();
                System.out.println("Enter The Floor ID That You Would Like To See Its house");
                String ss = scanner.nextLine();
 
+               methodsObj.getHouseIdByResidentAndFloor(s,ss);
 
-               for (int i = 0; i < houses.size(); i++) {
+
+              /* for (int i = 0; i < houses.size(); i++) {
 
                    if (s == houses.get(i).getResidenceId() && ss == houses.get(i).getFloorId()) ;
                    {
@@ -156,16 +142,19 @@ public class Login {
                            System.out.println(houses.get(i).toString());
 
                        }
-
-
                    }
+               }*/
 
 
-               }
 
 
-           }else{
-               System.out.println("Invalid Input Try One Of The Valid Choices 1,2,3,4,5");
+           } else if (choice == 6) {
+
+
+           } else if (choice == 7) {
+
+           } else{
+               System.out.println("Invalid Input Try One Of The Valid Choices 1,2,3,4,5,6,7");
            }
 
 
