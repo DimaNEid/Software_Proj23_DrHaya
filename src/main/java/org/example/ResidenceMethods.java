@@ -3,7 +3,7 @@ package org.example;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AddResidence {
+public class ResidenceMethods {
     public static List<Residence> residences = new ArrayList<>();
     static Residence rr = new Residence();
 
@@ -18,4 +18,27 @@ public class AddResidence {
      residences.add(rr);
         return rr;
     }
+
+
+  /*  public List<Residence> viewResidences() {
+
+        System.out.println("All your Residences: ");
+
+        for(int i=0; i<residences.size(); i++){
+            System.out.println(residences.toString());
+
+        }
+
+        return residences ;
+    }*/
+
+
+        public static <T> List<T> printArrayList(List<T> arrayList) {
+            for (T item : arrayList) {
+                System.out.println(item.toString());
+            }
+            return arrayList;
+        }
+
+
 }

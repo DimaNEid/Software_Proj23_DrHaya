@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+
+
 public class Login {
 
     public static List<Residence> residences = new ArrayList<>();
@@ -45,34 +47,41 @@ public class Login {
 
            if (choice == 1) {
 
+               ResidenceMethods residenceMethodsObj = new ResidenceMethods();
+
                System.out.println("Add Resident ID");
                String input1 = scanner.nextLine();
-               rr.setResidenceID(input1);
+
 
                System.out.println("Add your ID");
                String input2 = scanner.nextLine();
-               rr.setOwnerID(input2);
 
                System.out.println("Add The resident location");
                String input3 = scanner.nextLine();
-               rr.setLocation(input3);
 
                System.out.println("Add The service you offer");
                String input4 = scanner.nextLine();
-               rr.setNumOfFloors(Integer.valueOf(input4));
 
-               residences.add(rr);
+               System.out.println("Add The Number Of Floors");
+               Integer input5 = Integer.valueOf(scanner.nextLine());
+
+               System.out.println("Add The Number Of Houses");
+               Integer input6 = Integer.valueOf(scanner.nextLine());
+
+               Residence addResidence = residenceMethodsObj.addResidence(input1,input2,input3,input4,input5, input6);
+
 
 
            } else if (choice == 2) {
 
                System.out.println("All your Residences: ");
 
+               ResidenceMethods.printArrayList(residences);
 
-               for (int i = 0; i < residences.size(); i++) {
+              /* for (int i = 0; i < residences.size(); i++) {
 
                    System.out.println(residences.get(i).toString());
-               }
+               }*/
 
            } else if (choice == 3) {
 
