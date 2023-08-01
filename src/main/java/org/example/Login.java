@@ -37,7 +37,7 @@ public class Login {
            System.out.println("2. View All Residences.");
            System.out.println("3. Add House.");
            System.out.println("4. View All House.");
-           System.out.println("5. View All House.");
+           System.out.println("5. Control Panel.");
 
 
            int choice = menu_in.nextInt();
@@ -155,6 +155,8 @@ public class Login {
                }
 
 
+           }else{
+               System.out.println("Invalid Input Try One Of The Valid Choices 1,2,3,4,5");
            }
 
 

@@ -8,7 +8,7 @@ public class Main {
     public static List<House> houses = new ArrayList<>();
     public static void main(String[] args) {
 
-        System.out.println("Welcome to Sakancom Application!");
+        System.out.println("Welcome to SakaNcom Application!");
 
         System.out.println("1.login ");
         Scanner scanner = new Scanner(System.in);
