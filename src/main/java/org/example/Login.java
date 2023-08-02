@@ -21,7 +21,7 @@ public class Login {
 
    }
 
-   private static void OwnerMethod() {
+   public static void OwnerMethod() {
        int x = 0;
 
        while (x != 1) {

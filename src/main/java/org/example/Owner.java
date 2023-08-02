@@ -8,6 +8,9 @@ public class Owner extends User{
     private String address;
     private String phone;
 
+    public Owner() {
+        super();
+    }
 
 
     public String getPhone(){return phone;}
