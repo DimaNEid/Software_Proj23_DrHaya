@@ -3,7 +3,7 @@ package org.example;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.example.Login.OwnerMethod;
+import static org.example.LoginUsersMethod.OwnerMethod;
 
 public class UserMethod {
     public static List<Owner> owners = new ArrayList<>();
@@ -38,8 +38,6 @@ public class UserMethod {
 
         owners.add(oo);
         return oo;}
-
-
 
 
 }/*class*/

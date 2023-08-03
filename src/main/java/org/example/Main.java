@@ -1,9 +1,7 @@
 package org.example;
 
-import java.io.*;
-import java.util.*;
+import static org.example.LoginUsersMethod.scanner;
 
-import static org.example.Login.scanner;
 
 public class Main {
 
@@ -72,25 +70,9 @@ public class Main {
 
                     if (signUser == 1) {
 
-                        System.out.println("Enter Your Id");
-                        String in1 = scanner.nextLine();
+                       SignUp.OwnerSignUp();
 
-                        System.out.println("Enter Your Name");
-                        String in2 = scanner.nextLine();
-
-                        System.out.println("Enter Your UserName");
-                        String in3 = scanner.nextLine();
-
-                        System.out.println("Enter Your Password");
-                        String in4 = scanner.nextLine();
-
-                        System.out.println("Enter Your Address");
-                        String in5 = scanner.nextLine();
-
-                        System.out.println("Enter Your Phone");
-                        String in6 = scanner.nextLine();
-
-                        UserMethod.addOwner(in1, in2, in3, in4, in5, in6);}
+                       }
 
                     else if (signUser == 2) { }
                     else if (signUser == 3) { }

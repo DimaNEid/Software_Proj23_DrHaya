@@ -1,13 +1,11 @@
 package org.example;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 import static org.example.Methods.*;
 
 
-public class Login {
+public class LoginUsersMethod {
 
 
     static Scanner menu_in = new Scanner(System.in);
@@ -17,9 +15,7 @@ public class Login {
    static Methods methodsObj = new Methods();
 
 
-   private static void adminMethod(){
-
-   }
+   private static void adminMethod(){}
 
    public static void OwnerMethod() {
        int x = 0;
@@ -33,8 +29,9 @@ public class Login {
            System.out.println("3. Add House.");
            System.out.println("4. View All House.");
            System.out.println("5. Control Panel.");
-           System.out.println("6. Check The tenants for a certain house");
-           System.out.println("7. Check Number Of Communication");
+           System.out.println("6. Update House Information.");
+           System.out.println("7. Check The tenants for a certain house");
+           System.out.println("8. Check Number Of Communication");
 
 
            int choice = menu_in.nextInt();
@@ -63,7 +60,7 @@ public class Login {
                System.out.println("Add The Number Of Houses");
                Integer input6 = Integer.valueOf(scanner.nextLine());
 
-              /* Residence addResidence =*/ methodsObj.addResidence(input1,input2,input3,input4,input5, input6);
+               methodsObj.addResidence(input1,input2,input3,input4,input5, input6);
 
 
 
@@ -72,8 +69,7 @@ public class Login {
                System.out.println("All your Residences: ");
                viewResidences();
 
-
-
+               
               /* for (int i = 0; i < residences.size(); i++) {System.out.println(residences.get(i).toString());}*/
 
            } else if (choice == 3) {
@@ -114,7 +110,7 @@ public class Login {
 
            } else if (choice == 5) {
 
-               System.out.println("If You Would Like To Check The Dashboard");
+               System.out.println("If You Would Like To Check The Control Panel");
                viewResidenceID();
 
                /*for (int i = 0; i < residences.size(); i++) {System.out.println(residences.get(i).getResidenceID()); }*/
@@ -151,8 +147,15 @@ public class Login {
            } else if (choice == 6) {
 
 
+
+
+
+
+
            } else if (choice == 7) {
 
+           } else if (choice == 8) {
+               
            } else{
                System.out.println("Invalid Input Try One Of The Valid Choices 1,2,3,4,5,6,7");
            }
@@ -163,4 +166,4 @@ public class Login {
 
 
 
-}
+}/*Class*/
