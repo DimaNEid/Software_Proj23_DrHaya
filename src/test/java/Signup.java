@@ -1,40 +1,71 @@
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+import org.example.UserInfo;
+import org.example.UserMethodReg;
+import org.junit.Test;
+
+import java.util.ArrayList;
+
+import static org.junit.Assert.assertTrue;
 
 public class Signup {
-    @Given("the user chose type owner")
-    public void the_user_chose_type_owner() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+    UserInfo uS;
+    public static UserMethodReg userSign = new UserMethodReg();
+    boolean signupResult = false;
+
+
+    public Signup() {
+        super();
+        uS = new UserInfo();
     }
 
-    @Given("they do not have an account in the system")
-    public void they_do_not_have_an_account_in_the_system() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    private static ArrayList<UserInfo> oww = new ArrayList<UserInfo>();
+
+    void informationCheck() {
+        UserInfo ow = new UserInfo( "dimaEid", "123");
+        userSign.usersInfo.add(ow);
+        oww.add(ow);
     }
 
-    @Then("the sign up succeeds")
-    public void the_sign_up_succeeds() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+    @Given("The user is on the registration page")
+    public void the_user_is_on_the_registration_page() {
+
     }
 
-    @Then("the user is redirected to the login")
-    public void the_user_is_redirected_to_the_login() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+
+   @When("The user enters a username {string} and password {string}")
+   public void the_user_enters_a_username_and_password(String u, String p) {
+    informationCheck();
+    signupResult = UserMethodReg.userLoginCheck(u, p);
+  }
+
+
+
+    @Then("user signed up")
+    public void user_signed_up_successfully() {
+        assertTrue(!signupResult);
     }
 
-    @Given("the user chose type admin")
-    public void the_user_chose_type_admin() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+    @When("user enters  {string} and {string}")
+    public void username_is_and_password_is(String u, String p) {
+        informationCheck();
+        signupResult = UserMethodReg.userLoginCheck(u, p);
     }
 
-    @Given("the user chose type tenant")
-    public void the_user_chose_type_tenant() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+
+    @Then("user connot sign up")
+    public void user_sign_up_fails() {
+        assertTrue(!signupResult);
     }
+
+
+
+
+
 }

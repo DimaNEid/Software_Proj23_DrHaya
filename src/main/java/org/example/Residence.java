@@ -2,8 +2,6 @@ package org.example;
 
 public class Residence {
 
-
-
     private String  residenceID, ownerID, location, services;
     private Integer numOfFloors, numOfHouses;
 
@@ -27,11 +25,11 @@ public class Residence {
     public void setLocation(String location) {this.location = location;}
     public String getServices() {return services;}
 
-    public void setServices(String services) {this.location = services;}
+    public void setServices(String services) {this.services = services;}
 
     public Integer getNumOfHouses() {return numOfHouses;}
 
-    public void setNumOfHouses(Integer services) {this.numOfHouses = numOfHouses;}
+    public void setNumOfHouses(Integer numOfHouses) {this.numOfHouses = numOfHouses;}
 
 
     public Residence(String residenceID, String ownerID, String location, Integer numOfFloors,String services,Integer numOfHouses ) {

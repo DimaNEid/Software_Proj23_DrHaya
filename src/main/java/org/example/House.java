@@ -5,7 +5,7 @@ public class House {
     private String house_id, residenceId, floorId, monthlyRent,balcony;
     private Integer  bathrooms, bedrooms;
 
-    public House(String house_id, String residenceId, Integer floor, String monthlyRent,String balcony, Integer bathrooms, Integer bedrooms) {
+    public House(String house_id, String residenceId, String floorId, String monthlyRent,String balcony, Integer bathrooms, Integer bedrooms) {
         this.house_id = house_id;
         this.residenceId = residenceId;
         this.floorId = floorId;
@@ -21,7 +21,7 @@ public class House {
 
     public String getHouse_id() {return house_id;}
 
-    public void setHouseId(String id) {this.house_id = house_id;}
+    public void setHouseId(String house_id) {this.house_id = house_id;}
 
     public String getResidenceId() {return residenceId;}
 
@@ -29,7 +29,7 @@ public class House {
 
     public String getFloorId() {return floorId;}
 
-    public void setFloorId(String floor) {this.floorId = floorId;}
+    public void setFloorId(String floorId) {this.floorId = floorId;}
 
     public String getBalcony() {return balcony;}
 
@@ -42,7 +42,7 @@ public class House {
     public Integer getBathroomNum(){return bathrooms;}
     public void setBathroomsNum(Integer bathrooms){this.bathrooms=bathrooms;}
     public Integer getBedroomsNum(){return bedrooms;}
-    public void setBedroomsNum(Integer bathrooms){this.bathrooms=bedrooms;}
+    public void setBedroomsNum(Integer bedrooms){this.bedrooms=bedrooms;}
 
     @Override
     public String toString() {
