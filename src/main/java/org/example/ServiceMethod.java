@@ -3,7 +3,6 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 import java.util.Scanner;
 
 
@@ -17,17 +16,9 @@ public class ServiceMethod {
     public static List<House> houses = new ArrayList<>();
     static House hh = new House();
 
-    public boolean addResidenceCheck(String resID){
-        for (int i=0 ; i<residences.size();i++){
-            if(resID.equals(residences.get(i).getResidenceID())){
-                System.out.println("The Residence exists already");
-                return false;
-            }}
 
-            return true;
-        }
 
-    public Residence addResidence(String residenceID, String ownerID, String location, Integer numOfFloors,String services, Integer numOfHouses) {
+    public boolean addResidence(String residenceID, String ownerID, String location, Integer numOfFloors, String services, Integer numOfHouses) {
         rr.setResidenceID(residenceID);
         rr.setOwnerID(ownerID);
         rr.setLocation(location);
@@ -36,10 +27,10 @@ public class ServiceMethod {
         rr.setNumOfHouses(numOfHouses);
 
         residences.add(rr);
-        return rr;
+          return true;
     }
 
-    public House addHouse(String house_id, String residenceId, String floorId, String monthlyRent, String balcony, Integer bathrooms, Integer bedrooms) {
+    public boolean addHouse(String house_id, String residenceId, String floorId, String monthlyRent, String balcony, Integer bathrooms, Integer bedrooms) {
         hh.setHouseId(house_id);
         hh.setResidenceId(residenceId);
         hh.setFloorId(floorId);
@@ -49,7 +40,7 @@ public class ServiceMethod {
         hh.setBedroomsNum(bedrooms);
 
         houses.add(hh);
-        return hh;
+        return true;
     }
 
 
@@ -88,8 +79,8 @@ public class ServiceMethod {
         return false;
     }
 
-
-    static String sss = scanner.nextLine();
+/*
+    //static String sss = scanner.nextLine();
     public static boolean getHouseIdByResidentAndFloor(String residentId, String floorId) {
         String out = null;
         for (int i = 0; i < houses.size(); i++) {
@@ -98,9 +89,9 @@ public class ServiceMethod {
 
                 System.out.println("Enter The House ID That You Would Like To See Its Details");
 
-                searchHouse(houses.get(i).getHouse_id());
 
-/*
+
+
                 if(sss.equals(houses.get(i).getHouse_id())){
                     out = houses.get(i).toString();
                     System.out.println(out);
@@ -109,14 +100,14 @@ public class ServiceMethod {
 
 
                 }
-                */
+
             }
         }
 
         return false;
 
 
-    }
+    }*/
 
     public static String updateHouse(){
         String str = "The House Information is Updated";

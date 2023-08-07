@@ -100,6 +100,8 @@ public class Main {
                                         else if (choice == 2) {
 
 
+
+
                                             System.out.println("Add Resident ID");
                                             String input1 = scanner.nextLine();
 
@@ -177,7 +179,7 @@ public class Main {
                                             System.out.println("Enter The Floor ID That You Would Like To See Its house");
                                             String ss = scanner.nextLine();
 
-                                            methodsObj.getHouseIdByResidentAndFloor(s, ss);
+                                          //  methodsObj.getHouseIdByResidentAndFloor(s, ss);
 
 
                                         } else if (choice == 7) {
