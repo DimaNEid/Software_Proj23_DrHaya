@@ -3,6 +3,7 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Scanner;
 
 
@@ -16,12 +17,22 @@ public class ServiceMethod {
     public static List<House> houses = new ArrayList<>();
     static House hh = new House();
 
-    public Residence addResidence(String residenceID, String ownerID, String location, String services, Integer numOfFloors, Integer numOfHouses) {
+    public boolean addResidenceCheck(String resID){
+        for (int i=0 ; i<residences.size();i++){
+            if(resID.equals(residences.get(i).getResidenceID())){
+                System.out.println("The Residence exists already");
+                return false;
+            }}
+
+            return true;
+        }
+
+    public Residence addResidence(String residenceID, String ownerID, String location, Integer numOfFloors,String services, Integer numOfHouses) {
         rr.setResidenceID(residenceID);
         rr.setOwnerID(ownerID);
         rr.setLocation(location);
-        rr.setServices(services);
         rr.setNumOfFloors(numOfFloors);
+        rr.setServices(services);
         rr.setNumOfHouses(numOfHouses);
 
         residences.add(rr);
@@ -68,27 +79,41 @@ public class ServiceMethod {
         return houses;
     }
 
+    public static boolean searchHouse(String s){
+        for (int i = 0; i < houses.size(); i++) {
+            if(s.equals(houses.get(i).getHouse_id())) {
+                return true;
+            }
+        }
+        return false;
+    }
 
-    public static String getHouseIdByResidentAndFloor(String residentId, String floorId) {
+
+    static String sss = scanner.nextLine();
+    public static boolean getHouseIdByResidentAndFloor(String residentId, String floorId) {
         String out = null;
         for (int i = 0; i < houses.size(); i++) {
             if (residentId.equals(houses.get(i).getResidenceId()) && floorId.equals(houses.get(i).getFloorId())) {
                 System.out.println(houses.get(i).getHouse_id());
 
                 System.out.println("Enter The House ID That You Would Like To See Its Details");
-                String sss = scanner.nextLine();
 
+                searchHouse(houses.get(i).getHouse_id());
+
+/*
                 if(sss.equals(houses.get(i).getHouse_id())){
                     out = houses.get(i).toString();
+                    System.out.println(out);
 
-                    return out;
+                    return true;
 
 
                 }
+                */
             }
         }
 
-        return null;
+        return false;
 
 
     }

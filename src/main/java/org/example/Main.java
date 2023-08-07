@@ -119,7 +119,7 @@ public class Main {
                                             System.out.println("Add The Number Of Houses");
                                             Integer input6 = Integer.valueOf(scanner.nextLine());
 
-                                            methodsObj.addResidence(input1, input2, input3, input4, input5, input6);
+                                            methodsObj.addResidence(input1, input2, input3, input5, input4, input6);
 
 
                                         } else if (choice == 3) {
@@ -240,12 +240,7 @@ public class Main {
                         System.out.println("Enter Your password");
                         String in2 = scanner.nextLine();
 
-                        for (int i = 0; i < usersInfo.size(); i++) {
-                            if (in1!= (usersInfo.get(i).getUsername()) || in2!=((usersInfo.get(i).getPassword()))){
-
-                        UserMethodReg.addUser(in1, in2);}
-
-                       }}
+                       }
 
                     else if (signUser == 2) { }
                     else if (signUser == 3) { }

@@ -6,20 +6,14 @@ import java.util.Scanner;
 
 public class UserMethodReg {
 
-    static String msg1 = "True";
-    static String msg2 = "false";
-
-    static Scanner scanner = new Scanner(System.in);
     public static List<UserInfo> usersInfo = new ArrayList<>();
     static UserInfo ui = new UserInfo();
-
 
     public static boolean userSignUpCheck(String u, String p) {
 
         for (int i = 0; i < usersInfo.size(); i++) {
             if (u.equals(usersInfo.get(i).getUsername()) || p.equals(usersInfo.get(i).getPassword()) ){
                 System.out.println("Enter Valid Information");
-
 
                 return false;
 
