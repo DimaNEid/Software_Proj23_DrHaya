@@ -8,6 +8,12 @@ public class PersonsMethod {
     public static List<Owner> owners = new ArrayList<>();
     static Owner oo = new Owner();
 
+    public static List<Tenant> tenants = new ArrayList<>();
+    static Tenant tt = new Tenant();
+
+    public static List<Admin> admin = new ArrayList<>();
+    static Admin aa = new Admin();
+
     public static boolean addOwner(String id, String name, String phone, String address) {
         oo.setId(id);
         oo.setName(name);
@@ -16,6 +22,28 @@ public class PersonsMethod {
 
 
         owners.add(oo);
+        return true;
+    }
+
+    public static boolean addTenant(String id, String name, String phone, String address) {
+        tt.setId(id);
+        tt.setName(name);
+        tt.setPhone(phone);
+        tt.setAddress(address);
+
+
+        tenants.add(tt);
+        return true;
+    }
+
+    public static boolean addAdmin(String id, String name, String phone, String address) {
+        aa.setId(id);
+        aa.setName(name);
+        aa.setPhone(phone);
+        aa.setAddress(address);
+
+
+        admin.add(aa);
         return true;
     }
 }

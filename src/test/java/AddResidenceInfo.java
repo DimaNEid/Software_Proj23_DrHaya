@@ -1,6 +1,7 @@
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.example.House;
 import org.example.Residence;
 import org.example.ServiceMethod;
 
@@ -11,7 +12,7 @@ import static org.junit.Assert.*;
 public class AddResidenceInfo {
 
     private boolean b = false;
-    private String s ;
+
 
     Residence rT;
     public static ServiceMethod resTest = new ServiceMethod();
@@ -23,6 +24,7 @@ public class AddResidenceInfo {
     }
 
     private static ArrayList<Residence> rArrayTest = new ArrayList<Residence>();
+
 
     void resInfo() {
         Residence ow = new Residence("50","999","Rafedia Street",10,"electricity",20);

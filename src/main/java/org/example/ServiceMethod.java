@@ -44,30 +44,30 @@ public class ServiceMethod {
     }
 
 
-    public static List<Residence> viewResidences() {
+    public static boolean viewResidences() {
 
         for (int i = 0; i < residences.size(); i++) {
             System.out.println(residences.get(i).toString());
         }
-        return residences;
+        return true;
     }
 
-    public static List<Residence> viewResidenceID() {
+    public static boolean viewResidenceID() {
 
         for (int i = 0; i < residences.size(); i++) {
             System.out.println(residences.get(i).getResidenceID());
         }
-        return residences;
+        return true;
     }
 
 
-    public static List<House> viewHouses() {
+    public static boolean viewHouses() {
 
         for (int i = 0; i < houses.size(); i++) {
             System.out.println(houses.get(i).toString());
         }
 
-        return houses;
+        return true;
     }
 
     public static boolean searchHouse(String s){

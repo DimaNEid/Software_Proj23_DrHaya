@@ -12,7 +12,6 @@ import static org.junit.Assert.assertTrue;
 public class AddHouse {
 
     private boolean b = false;
-    private String s ;
 
     House rT;
     public static ServiceMethod resTest = new ServiceMethod();
