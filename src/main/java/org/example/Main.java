@@ -240,12 +240,7 @@ public class Main {
                         System.out.println("Enter Your password");
                         String in2 = scanner.nextLine();
 
-                        for (int i = 0; i < usersInfo.size(); i++) {
-                            if (in1!= (usersInfo.get(i).getUsername()) || in2!=((usersInfo.get(i).getPassword()))){
-
-                        UserMethodReg.addUser(in1, in2);}
-
-                       }}
+                       }
 
                     else if (signUser == 2) { }
                     else if (signUser == 3) { }

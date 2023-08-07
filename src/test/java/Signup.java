@@ -40,28 +40,28 @@ public class Signup {
    @When("The user enters a username {string} and password {string}")
    public void the_user_enters_a_username_and_password(String u, String p) {
     informationCheck();
-    signupResult = UserMethodReg.userLoginCheck(u, p);
+    signupResult = UserMethodReg.userSignUpCheck(u, p);
   }
 
 
 
     @Then("user signed up")
     public void user_signed_up_successfully() {
-        assertTrue(!signupResult);
+        assertTrue(signupResult);
     }
 
 
     @When("user enters  {string} and {string}")
     public void username_is_and_password_is(String u, String p) {
         informationCheck();
-        signupResult = UserMethodReg.userLoginCheck(u, p);
+        signupResult = UserMethodReg.userSignUpCheck(u, p);
     }
 
 
 
     @Then("user connot sign up")
     public void user_sign_up_fails() {
-        assertTrue(!signupResult);
+        assertTrue(signupResult);
     }
 
 
