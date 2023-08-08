@@ -45,15 +45,18 @@ public class ServiceMethod {
 
 
     public static boolean viewResidences() {
+        boolean residencesViewed = false;
         if ( !residences.isEmpty()) {
             for (Residence residence : residences) {
                 logger.info(residence.toString());
+                residencesViewed = true;
             }
-            return true;
+
         } else {
             logger.warning("Residences collection is null or empty");
-            return false;
+
         }
+        return residencesViewed;
     }
 
 
