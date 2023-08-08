@@ -3,10 +3,12 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.logging.Logger;
 
 
 public class ServiceMethod {
+
+    private static final Logger logger = Logger.getLogger(ServiceMethod.class.getName());
 
     public static List<Residence> residences = new ArrayList<>();
     static Residence rr = new Residence();
@@ -45,7 +47,7 @@ public class ServiceMethod {
     public static boolean viewResidences() {
 
         for (Residence residence : residences) {
-            System.out.println(residence.toString());
+            logger.info(residence.toString());
         }
         return true;
     }
@@ -53,7 +55,7 @@ public class ServiceMethod {
     public static boolean viewResidenceID() {
 
         for (Residence residence : residences) {
-            System.out.println(residence.getResidenceID());
+          logger.info(residence.getResidenceID());
         }
         return true;
     }
@@ -61,7 +63,7 @@ public class ServiceMethod {
     public static boolean viewHouses() {
 
         for (House house : houses) {
-            System.out.println(house.toString());
+            logger.info(house.toString());
         }
 
         return true;

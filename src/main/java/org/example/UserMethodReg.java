@@ -1,8 +1,11 @@
 package org.example;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Logger;
 
 public class UserMethodReg {
+
+    private static final Logger logger = Logger.getLogger(UserMethodReg.class.getName());
 
     public static List<UserInfo> usersInfo = new ArrayList<>();
     static UserInfo ui = new UserInfo();
@@ -11,12 +14,12 @@ public class UserMethodReg {
 
         for (UserInfo userInfo : usersInfo) {
             if (u.equals(userInfo.getUsername()) || p.equals(userInfo.getPassword())) {
-                System.out.println("Enter Valid Information");
+                logger.info("Enter Valid Information");
 
                 return false;}
         }
 
-        System.out.println("Signed Up Successfully");
+        logger.info("Signed Up Successfully");
         addUser(u,p);
             return true;
 
@@ -33,7 +36,7 @@ public class UserMethodReg {
 
         for (UserInfo userInfo : usersInfo) {
             if (username.equals(userInfo.getUsername()) && password.equals(userInfo.getPassword())) {
-                System.out.println("Logged In Successfully");
+                logger.info("Logged In Successfully");
 
                 return true;
             }
