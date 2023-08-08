@@ -41,7 +41,7 @@ public class AddPersonInfo {
     }
     void adminInfo() {
         Admin ad = new Admin( "444", "Kamal", "0599632458", "baker street");
-        perTest.admin.add(ad);
+        PersonsMethod.admin.add(ad);
         aArrayTest.add(ad);
     }
 

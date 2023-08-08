@@ -1,7 +1,6 @@
 package org.example;
-import java.util.Scanner;
 
-import static org.example.UserMethodReg.usersInfo;
+import java.util.Scanner;
 
 
 public class Main {
@@ -56,9 +55,7 @@ public class Main {
 
                                  ServiceMethod methodsObj = new ServiceMethod();
 
-                                int xO = 0;
-
-                                while (xO != 1) {
+                                while (true) {
                                     System.out.println("Welcome Owner!");
                                     System.out.println("Please choose one of the following: ");
 
@@ -184,8 +181,8 @@ public class Main {
 
                                         } else if (choice == 7) {
                                            // ServiceMethod.updateHouse();
-                                        /*
 
+/*
                                                     System.out.println("Enter The house Id That You Would Like To Edit Its Information");
                                                     String i1 = scanner.nextLine();
 
@@ -244,16 +241,19 @@ public class Main {
                                                             hh.setBedroomsNum(Integer.valueOf(i7));
                                                             houses.add(hh);}
 
-                                                        */
+                                                        return str;
+
+                                                    }else {
+                                                        return str1;
+
+                                                    }
 
 
-
-
-
+*/
 
 
                                         } else if (choice == 8) {
-                                            ServiceMethod.updateResidence();
+
 
 
                                         } else if (choice == 9) {

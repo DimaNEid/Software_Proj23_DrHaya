@@ -2,7 +2,6 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class UserMethodReg {
 
@@ -11,13 +10,11 @@ public class UserMethodReg {
 
     public static boolean userSignUpCheck(String u, String p) {
 
-        for (int i = 0; i < usersInfo.size(); i++) {
-            if (u.equals(usersInfo.get(i).getUsername()) || p.equals(usersInfo.get(i).getPassword()) ){
+        for (UserInfo userInfo : usersInfo) {
+            if (u.equals(userInfo.getUsername()) || p.equals(userInfo.getPassword())) {
                 System.out.println("Enter Valid Information");
 
-                return false;
-
-            }
+                return false;}
         }
 
         System.out.println("Signed Up Successfully");
@@ -25,21 +22,22 @@ public class UserMethodReg {
             return true;
 
     }
-    public static boolean addUser(String u, String p){
+
+    public static void addUser(String u, String p){
         ui.setUsername(u);
         ui.setPassword(p);
         usersInfo.add(ui);
 
-        return true;
-
     }
+
     public static boolean userLoginCheck(String username, String password)  {
 
-        for(int i=0 ; i<usersInfo.size();i++){
-            if(username.equals(usersInfo.get(i).getUsername()) && password.equals(usersInfo.get(i).getPassword())){
+        for (UserInfo userInfo : usersInfo) {
+            if (username.equals(userInfo.getUsername()) && password.equals(userInfo.getPassword())) {
                 System.out.println("Logged In Successfully");
 
-                return true;}
+                return true;
+            }
         }
         return false;
     }
