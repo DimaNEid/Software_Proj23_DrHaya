@@ -7,8 +7,9 @@ public class UserMethodReg {
 
     private static final Logger logger = Logger.getLogger(UserMethodReg.class.getName());
 
-    public static List<UserInfo> usersInfo = new ArrayList<>();
+    public static final List<UserInfo> usersInfo = new ArrayList<>();
     static UserInfo ui = new UserInfo();
+
 
     public static boolean userSignUpCheck(String u, String p) {
 
