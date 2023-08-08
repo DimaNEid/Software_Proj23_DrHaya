@@ -11,12 +11,9 @@ public class Main {
 
 
         logger.info("\n Welcome to SakaNcom Application!");
-        logger.info("----------------------------------");
-        logger.info("|                                |");
-        logger.info("|        1. Log In               |");
-        logger.info("|        2. Sign Up              |");
-        logger.info("|                                |");
-        logger.info("----------------------------------\n");
+        logger.info(" 1. Log In ");
+        logger.info(" 2. Sign Up");
+
 
         logger.info("Enter Your Choice");
             int choiceReg = scanner.nextInt();
@@ -26,13 +23,11 @@ public class Main {
 
                 logger.info("Log In Page");
 
-                logger.info("\n---------- Log In As ----------");
-                logger.info("|                                |");
-                logger.info("|        1. Owner                |");
-                logger.info("|        2. Admin                |");
-                logger.info("|        3. Tenant               |");
-                logger.info("|                                |");
-                logger.info("----------------------------------\n");
+                logger.info("\n-- Log In As --");
+                logger.info("  1. Owner  ");
+                logger.info("  2. Admin  ");
+                logger.info("  3. Tenant ");
+
 
                 logger.info("Enter Your Choice");
                     int logUser = scanner.nextInt();
@@ -290,13 +285,10 @@ public class Main {
 
                 logger.info("Sign Up As: ");
 
-                logger.info("\n---------- Sign Up Page ----------");
-                logger.info("|                                 |");
-                logger.info("|        1. Owner   Account       |");
-                logger.info("|        2. Admin   Account       |");
-                logger.info("|        3. Tenant  Account       |");
-                logger.info("|                                 |");
-                logger.info("----------------------------------\n");
+                logger.info("\n-- Sign Up Page --");
+                logger.info("  1. Owner   Account ");
+                logger.info("  2. Admin   Account ");
+                logger.info("  3. Tenant  Account ");
 
                 logger.info("Enter Your Choice");
                     int signUser = scanner.nextInt();
