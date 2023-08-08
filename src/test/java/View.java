@@ -32,6 +32,8 @@ public class View {
     private static ArrayList<Residence> rArrayTest = new ArrayList<Residence>();
     private static ArrayList<House> hArrayTest = new ArrayList<House>();
 
+
+
     void resInfo() {
         Residence ow = new Residence("50","999","Rafedia Street",10,"electricity",20);
         resTest.residences.add(ow);

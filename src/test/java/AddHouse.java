@@ -6,6 +6,7 @@ import org.example.ServiceMethod;
 
 import java.util.ArrayList;
 
+
 import static org.junit.Assert.assertTrue;
 
 public class AddHouse {
@@ -14,6 +15,8 @@ public class AddHouse {
 
     House rT;
     public static ServiceMethod resTest = new ServiceMethod();
+
+
 
 
     public AddHouse() {

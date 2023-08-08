@@ -9,7 +9,7 @@ public class Main {
     private static final Logger logger = Logger.getLogger(Main.class.getName());
     static Scanner scanner = new Scanner(System.in);
 
-    public static final List<House> houses = new ArrayList<>();
+    protected static final List<House> houses = new ArrayList<>();
     static House hh = new House();
 
 
