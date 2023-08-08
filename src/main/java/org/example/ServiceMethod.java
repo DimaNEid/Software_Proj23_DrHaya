@@ -109,19 +109,7 @@ public class ServiceMethod {
 
     }*/
 
-    public static boolean updateHouse(String id, String residenceId, String floorId, String monthlyRent, String balcony, Integer bathrooms, Integer bedrooms){
-        hh.setHouseId(id);
-        hh.setResidenceId(residenceId);
-        hh.setFloorId(floorId);
-        hh.setMonthlyRent(monthlyRent);
-        hh.setBalcony(balcony);
-        hh.setBathroomsNum(bathrooms);
-        hh.setBedroomsNum(bedrooms);
 
-        houses.add(hh);
-
-       return true;
-    }
 
     public static String updateResidence(){
         String str = "The Residence Information is Updated";
