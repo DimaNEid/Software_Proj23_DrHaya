@@ -10,6 +10,10 @@ public class ServiceMethod {
 
     private static final Logger logger = Logger.getLogger(ServiceMethod.class.getName());
 
+    public static Residence getRr() {
+        return rr;
+    }
+
     public static final List<Residence> residences = new ArrayList<>();
     static Residence rr = new Residence();
 
@@ -69,15 +73,10 @@ public class ServiceMethod {
     }
 
     public static boolean viewHouses() {
-        if ( !houses.isEmpty()) {
-            for (House house : houses) {
-                logger.info(house.toString());
-            }
-            return true;
-        } else {
-            logger.warning("Residences collection is null or empty");
-            return false;
+        for (House house : houses) {
+            logger.info(house.toString());
         }
+        return true;
     }
 
 
