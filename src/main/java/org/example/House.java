@@ -10,7 +10,7 @@ public class House {
     private Integer  bathrooms;
     private Integer bedrooms;
 
-    public House(String houseId, String residenceId, String floorId, String monthlyRent,String balcony, Integer bathrooms, Integer bedrooms) {
+    public House(String houseId , String residenceId, String floorId, String monthlyRent,String balcony, Integer bathrooms, Integer bedrooms) {
         this.houseId = houseId;
         this.residenceId = residenceId;
         this.floorId = floorId;
