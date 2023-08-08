@@ -15,7 +15,7 @@ public class Main {
         logger.info(" 2. Sign Up");
 
 
-        logger.info("Enter Your Choice");
+        logger.info("Enter Registration");
             int choiceReg = scanner.nextInt();
 
 
@@ -290,7 +290,7 @@ public class Main {
                 logger.info("  2. Admin   Account ");
                 logger.info("  3. Tenant  Account ");
 
-                logger.info("Enter Your Choice");
+                logger.info("Enter Your Account");
                     int signUser = scanner.nextInt();
 
                     if (signUser == 1) {
