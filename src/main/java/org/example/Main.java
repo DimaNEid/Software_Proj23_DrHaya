@@ -175,13 +175,13 @@ public class Main {
                                         for (House house : houses) {
                                             if (s.equals(house.getResidenceId()) && ss.equals(house.getFloorId())) {
                                                 logger.info(house.getHouseId());
-                                            }else{String mm = "enter again";}
+                                            }else{logger.info("enter again") ;}
 
                                             logger.info("Enter The House ID That You Would Like To See Its Details");
                                             String sss = scanner.nextLine();
                                             if (sss.equals(house.getHouseId())) {
                                                 logger.info(house.toString());
-                                            }else{String m = "wrong input";}
+                                            }else{logger.info("wrong input");}
 
 
                                         }
