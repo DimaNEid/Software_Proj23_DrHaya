@@ -3,7 +3,8 @@ package org.example;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Owner {
+public class
+Owner {
     public Owner(String id,String name,String phone, String address) {
         this.id = id;
         this.name = name;

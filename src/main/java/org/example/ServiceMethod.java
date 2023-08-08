@@ -109,80 +109,18 @@ public class ServiceMethod {
 
     }*/
 
-    public static String updateHouse(){
-        String str = "The House Information is Updated";
-        String str1 = "Enter Valid House Id";
+    public static boolean updateHouse(String id, String residenceId, String floorId, String monthlyRent, String balcony, Integer bathrooms, Integer bedrooms){
+        hh.setHouseId(id);
+        hh.setResidenceId(residenceId);
+        hh.setFloorId(floorId);
+        hh.setMonthlyRent(monthlyRent);
+        hh.setBalcony(balcony);
+        hh.setBathroomsNum(bathrooms);
+        hh.setBedroomsNum(bedrooms);
 
-        while(true){
-            for (int i = 0; i < houses.size(); i++){
+        houses.add(hh);
 
-                System.out.println("Enter The house Id That You Would Like To Edit Its Information");
-                String i1 = scanner.nextLine();
-
-                if (i1.equals(houses.get(i).getHouse_id())){
-
-                    int x = scanner.nextInt();
-
-                    System.out.println("Choose Which Information You Want To Edit.");
-
-                    System.out.println("1. Residence Id.");
-                    System.out.println("2. Floor Number.");
-                    System.out.println("3. Monthly Rent.");
-                    System.out.println("4. Balcony.");
-                    System.out.println("5. Bathrooms.");
-                    System.out.println("6. Bedrooms");
-
-                    if (x == 1){
-                        System.out.println("Enter New House Id.");
-                        String i2 = scanner.nextLine();
-                        hh.setHouseId(i2);
-                        houses.add(hh);}
-
-                    else if (x==2) {
-                        System.out.println("Enter New Floor Number.");
-                        String i3 = scanner.nextLine();
-                        hh.setFloorId(i3);
-                        houses.add(hh);
-
-                    } else if (x==3) {
-                        System.out.println("Enter New Monthly Rent.");
-                        String i4 = scanner.nextLine();
-                        hh.setMonthlyRent(i4);
-                        houses.add(hh);}
-
-                    else if (x==4) {
-                        System.out.println("Enter New Balcony.");
-                        String i5 = scanner.nextLine();
-                        hh.setBalcony(i5);
-                        houses.add(hh);
-
-                    } else if (x==5) {
-                        System.out.println("Enter New Balcony Number.");
-                        String i5 = scanner.nextLine();
-                        hh.setBalcony(i5);
-                        houses.add(hh);
-
-                    } else if (x==6) {
-                        System.out.println("Enter New Bathrooms Number.");
-                        String i6 = scanner.nextLine();
-                        hh.setBathroomsNum(Integer.valueOf(i6));
-                        houses.add(hh);
-
-                    } else if (x==7) {
-                        System.out.println("Enter New Bedrooms Number.");
-                        String i7 = scanner.nextLine();
-                        hh.setBedroomsNum(Integer.valueOf(i7));
-                        houses.add(hh);}
-
-                    return str;
-
-                }else {
-                    return str1;
-
-                }
-            }
-        }
-
+       return true;
     }
 
     public static String updateResidence(){
