@@ -66,13 +66,17 @@ public class ServiceMethod {
     }
 
     public static boolean viewHouses() {
-
-        for (House house : houses) {
-            logger.info(house.toString());
+        if (houses != null && !houses.isEmpty()) {
+            for (House house : houses) {
+                logger.info(house.toString());
+            }
+            return true;
+        } else {
+            logger.warning("Residences collection is null or empty");
+            return false;
         }
-
-        return true;
     }
+
 
 
 

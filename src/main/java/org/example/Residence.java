@@ -2,8 +2,12 @@ package org.example;
 
 public class Residence {
 
-    private String  residenceID, ownerID, location, services;
-    private Integer numOfFloors, numOfHouses;
+    private String  residenceID;
+    private String ownerID;
+    private String location;
+    private String services;
+    private Integer numOfFloors;
+    private Integer numOfHouses;
 
     public Residence() {
 
