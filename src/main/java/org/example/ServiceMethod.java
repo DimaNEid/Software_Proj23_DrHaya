@@ -10,10 +10,10 @@ public class ServiceMethod {
 
     private static final Logger logger = Logger.getLogger(ServiceMethod.class.getName());
 
-    public static List<Residence> residences = new ArrayList<>();
+    public static final List<Residence> residences = new ArrayList<>();
     static Residence rr = new Residence();
 
-    public static List<House> houses = new ArrayList<>();
+    public static final List<House> houses = new ArrayList<>();
     static House hh = new House();
 
 
@@ -30,8 +30,8 @@ public class ServiceMethod {
           return true;
     }
 
-    public boolean addHouse(String house_id, String residenceId, String floorId, String monthlyRent, String balcony, Integer bathrooms, Integer bedrooms) {
-        hh.setHouseId(house_id);
+    public boolean addHouse(String houseId, String residenceId, String floorId, String monthlyRent, String balcony, Integer bathrooms, Integer bedrooms) {
+        hh.setHouseId(houseId);
         hh.setResidenceId(residenceId);
         hh.setFloorId(floorId);
         hh.setMonthlyRent(monthlyRent);
@@ -45,11 +45,15 @@ public class ServiceMethod {
 
 
     public static boolean viewResidences() {
-
-        for (Residence residence : residences) {
-            logger.info(residence.toString());
+        if (residences != null) {
+            for (Residence residence : residences) {
+                logger.info(residence.toString());
+            }
+            return true;
+        } else {
+            logger.warning("Residences collection is null");
+            return false;
         }
-        return true;
     }
 
     public static boolean viewResidenceID() {
