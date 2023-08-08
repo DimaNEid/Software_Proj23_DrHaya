@@ -2,11 +2,11 @@ package org.example;
 
 public class House {
 
-    private String house_id, residenceId, floorId, monthlyRent,balcony;
+    private String houseId, residenceId, floorId, monthlyRent,balcony;
     private Integer  bathrooms, bedrooms;
 
-    public House(String house_id, String residenceId, String floorId, String monthlyRent,String balcony, Integer bathrooms, Integer bedrooms) {
-        this.house_id = house_id;
+    public House(String houseId, String residenceId, String floorId, String monthlyRent,String balcony, Integer bathrooms, Integer bedrooms) {
+        this.houseId = houseId;
         this.residenceId = residenceId;
         this.floorId = floorId;
         this.monthlyRent = monthlyRent;
@@ -19,9 +19,9 @@ public class House {
 
     }
 
-    public String getHouse_id() {return house_id;}
+    public String getHouse_id() {return houseId;}
 
-    public void setHouseId(String house_id) {this.house_id = house_id;}
+    public void setHouseId(String houseId) {this.houseId = houseId;}
 
     public String getResidenceId() {return residenceId;}
 
@@ -47,7 +47,7 @@ public class House {
     @Override
     public String toString() {
         return "Houses{" +
-                "ID " + house_id +
+                "ID " + houseId +
                 ", ResidenceID '" + residenceId + '\'' +
                 ", FloorID '" + floorId + '\'' +
                 ", Monthly Rent '" + monthlyRent + '\'' +
