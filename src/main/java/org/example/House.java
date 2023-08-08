@@ -19,7 +19,7 @@ public class House {
 
     }
 
-    public String getHouse_id() {return houseId;}
+    public String getHouseId() {return houseId;}
 
     public void setHouseId(String houseId) {this.houseId = houseId;}
 

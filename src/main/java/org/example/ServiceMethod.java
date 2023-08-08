@@ -72,7 +72,7 @@ public class ServiceMethod {
 
     public static boolean searchHouse(String s){
         for (int i = 0; i < houses.size(); i++) {
-            if(s.equals(houses.get(i).getHouse_id())) {
+            if(s.equals(houses.get(i).getHouseId())) {
                 return true;
             }
         }
