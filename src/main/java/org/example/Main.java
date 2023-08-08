@@ -1,11 +1,17 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.logging.Logger;
 
 public class Main {
     private static final Logger logger = Logger.getLogger(Main.class.getName());
     static Scanner scanner = new Scanner(System.in);
+
+    public static final List<House> houses = new ArrayList<>();
+    static House hh = new House();
+
 
     public static void main(String[] args) {
 
@@ -39,7 +45,6 @@ public class Main {
                         logger.info("Enter Your Password");
                         String p = String.valueOf(scanner.nextInt());
 
-                       // UserMethod.ownerLogin(u, p);
                         boolean loginStatus = (UserMethodReg.userLoginCheck(u, p));
 
                             if (loginStatus) {
@@ -50,7 +55,7 @@ public class Main {
 
                                  ServiceMethod methodsObj = new ServiceMethod();
 
-                                while (true) {
+
                                     logger.info("Welcome Owner!");
                                     logger.info("Please choose one of the following: ");
 
@@ -61,9 +66,7 @@ public class Main {
                                     logger.info("5. View All House.");
                                     logger.info("6. Control Panel.");
                                     logger.info("7. Update House Information.");
-                                    logger.info("8. Update Residence Information.");
-                                    logger.info("9. Check The tenants for a certain house");
-                                    logger.info("10. Check Number Of Communication");
+                                    logger.info("8. Check Number Of Communication");
 
 
                                     int choice = menu_in.nextInt();
@@ -122,8 +125,6 @@ public class Main {
                                          ServiceMethod.viewResidences();
 
 
-                                            /* for (int i = 0; i < residences.size(); i++) {System.out.println(residences.get(i).toString());}*/
-
                                         } else if (choice == 4) {
 
                                         logger.info("Add House ID");
@@ -156,130 +157,122 @@ public class Main {
                                         logger.info("All your Houses: ");
                                         ServiceMethod.viewHouses();
 
-                                            //for (int i = 0; i < houses.size(); i++) {System.out.println(houses.get(i).toString());}
 
 
                                         } else if (choice == 6) {
 
                                         logger.info("If You Would Like To Check The Control Panel");
+                                        ServiceMethod.viewResidences();
                                         ServiceMethod.viewResidenceID();
-
-                                            /*for (int i = 0; i < residences.size(); i++) {System.out.println(residences.get(i).getResidenceID()); }*/
 
                                         logger.info("Enter The Resident ID That You Would Like To See Its Details");
                                          String s = scanner.nextLine();
-                                        logger.info("Enter The Floor ID That You Would Like To See Its house");
-                                          String ss = scanner.nextLine();
 
-                                          //  methodsObj.getHouseIdByResidentAndFloor(s, ss);
+
+                                        logger.info("Enter The Floor ID That You Would Like To See Its house");
+                                        String ss = scanner.nextLine();
+
+                                        for (House house : houses) {
+                                            if (s.equals(house.getResidenceId()) && ss.equals(house.getFloorId())) {
+                                                logger.info(house.getHouseId());
+                                            }
+
+                                            logger.info("Enter The House ID That You Would Like To See Its Details");
+                                            String sss = scanner.nextLine();
+                                            if (sss.equals(house.getHouseId())) {
+                                                logger.info(house.toString());
+                                            }
+
+
+                                        }
 
 
                                         } else if (choice == 7) {
-                                           // ServiceMethod.updateHouse();
-
-/*
-                                                    System.out.println("Enter The house Id That You Would Like To Edit Its Information");
-                                                    String i1 = scanner.nextLine();
-
-                                                    if (i1.equals(houses.get(i).getHouse_id())){
-
-                                                        int x = scanner.nextInt();
-
-                                                        System.out.println("Choose Which Information You Want To Edit.");
-
-                                                        System.out.println("1. Residence Id.");
-                                                        System.out.println("2. Floor Number.");
-                                                        System.out.println("3. Monthly Rent.");
-                                                        System.out.println("4. Balcony.");
-                                                        System.out.println("5. Bathrooms.");
-                                                        System.out.println("6. Bedrooms");
-
-                                                        if (x == 1){
-                                                            System.out.println("Enter New House Id.");
-                                                            String i2 = scanner.nextLine();
-                                                            hh.setHouseId(i2);
-                                                            houses.add(hh);}
-
-                                                        else if (x==2) {
-                                                            System.out.println("Enter New Floor Number.");
-                                                            String i3 = scanner.nextLine();
-                                                            hh.setFloorId(i3);
-                                                            houses.add(hh);
-
-                                                        } else if (x==3) {
-                                                            System.out.println("Enter New Monthly Rent.");
-                                                            String i4 = scanner.nextLine();
-                                                            hh.setMonthlyRent(i4);
-                                                            houses.add(hh);}
-
-                                                        else if (x==4) {
-                                                            System.out.println("Enter New Balcony.");
-                                                            String i5 = scanner.nextLine();
-                                                            hh.setBalcony(i5);
-                                                            houses.add(hh);
-
-                                                        } else if (x==5) {
-                                                            System.out.println("Enter New Balcony Number.");
-                                                            String i5 = scanner.nextLine();
-                                                            hh.setBalcony(i5);
-                                                            houses.add(hh);
-
-                                                        } else if (x==6) {
-                                                            System.out.println("Enter New Bathrooms Number.");
-                                                            String i6 = scanner.nextLine();
-                                                            hh.setBathroomsNum(Integer.valueOf(i6));
-                                                            houses.add(hh);
-
-                                                        } else if (x==7) {
-                                                            System.out.println("Enter New Bedrooms Number.");
-                                                            String i7 = scanner.nextLine();
-                                                            hh.setBedroomsNum(Integer.valueOf(i7));
-                                                            houses.add(hh);}
-
-                                                        return str;
-
-                                                    }else {
-                                                        return str1;
-
-                                                    }
 
 
-*/
+                                        logger.info("Enter The house Id That You Would Like To Edit Its Information");
+                                        String i1 = scanner.nextLine();
+
+                                        for (int i = 0 ;i<houses.size();i++){
+                                        if (i1.equals(houses.get(i).getHouseId())) {
+
+                                            int x = scanner.nextInt();
+
+                                            System.out.println("Choose Which Information You Want To Edit.");
+
+                                            System.out.println("1. Residence Id.");
+                                            System.out.println("2. Floor Number.");
+                                            System.out.println("3. Monthly Rent.");
+                                            System.out.println("4. Balcony.");
+                                            System.out.println("5. Bathrooms.");
+                                            System.out.println("6. Bedrooms");
+
+                                            if (x == 1) {
+                                                System.out.println("Enter New House Id.");
+                                                String i2 = scanner.nextLine();
+                                                hh.setHouseId(i2);
+                                                houses.add(hh);
+                                            } else if (x == 2) {
+                                                System.out.println("Enter New Floor Number.");
+                                                String i3 = scanner.nextLine();
+                                                hh.setFloorId(i3);
+                                                houses.add(hh);
+
+                                            } else if (x == 3) {
+                                                System.out.println("Enter New Monthly Rent.");
+                                                String i4 = scanner.nextLine();
+                                                hh.setMonthlyRent(i4);
+                                                houses.add(hh);
+                                            } else if (x == 4) {
+                                                System.out.println("Enter New Balcony.");
+                                                String i5 = scanner.nextLine();
+                                                hh.setBalcony(i5);
+                                                houses.add(hh);
+
+                                            } else if (x == 5) {
+                                                System.out.println("Enter New Balcony Number.");
+                                                String i5 = scanner.nextLine();
+                                                hh.setBalcony(i5);
+                                                houses.add(hh);
+
+                                            } else if (x == 6) {
+                                                System.out.println("Enter New Bathrooms Number.");
+                                                String i6 = scanner.nextLine();
+                                                hh.setBathroomsNum(Integer.valueOf(i6));
+                                                houses.add(hh);
+
+                                            } else if (x == 7) {
+                                                System.out.println("Enter New Bedrooms Number.");
+                                                String i7 = scanner.nextLine();
+                                                hh.setBedroomsNum(Integer.valueOf(i7));
+                                                houses.add(hh);
+                                            }
 
 
-                                        } else if (choice == 8) {
+                                        }
+                                    }
 
 
 
-                                        } else if (choice == 9) {
 
-                                        } else if (choice == 10) {
 
-                                        } else {
+                                        }   else {
                                             System.out.println("Invalid Input Try One Of The Valid Choices 1,2,3,4,5,6,7");
                                         }
 
-                                       break;
-                                }
+
 
                             }
 
 
-
-
-
-                            else{String invalid = "Invalid Input";}
-
-
                     }
 
-                    else if (logUser == 2) {}
-                    else if (logUser == 3) {}
+
                     else {    logger.info("Enter Valid Input 1,2,3");}
 
 
 
-            }/*1st if Login*/
+            }
             else if (choiceReg == 2) {
 
 
@@ -301,10 +294,9 @@ public class Main {
                         logger.info("Enter Your password");
                         String in2 = scanner.nextLine();
 
+                        UserMethodReg.userSignUpCheck(in1,in2);
                        }
 
-                    else if (signUser == 2) { }
-                    else if (signUser == 3) { }
                     else {    logger.info("Enter Valid Input 1,2,3");}
 
 

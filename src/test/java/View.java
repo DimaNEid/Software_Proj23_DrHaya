@@ -6,10 +6,14 @@ import org.example.Residence;
 import org.example.ServiceMethod;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.Assert.assertTrue;
 
 public class View {
+
+    protected static final List<Residence> residences = new ArrayList<>();
+    static Residence rr = new Residence();
 
     private boolean b = false;
 

@@ -2,8 +2,22 @@ package org.example;
 
 public class House {
 
+    public String getHouseId() {
+        return houseId;
+    }
+
     private String houseId;
+
+    public String getResidenceId() {
+        return residenceId;
+    }
+
     private String residenceId;
+
+    public String getFloorId() {
+        return floorId;
+    }
+
     private String floorId;
     private String monthlyRent;
     private String balcony;
@@ -23,8 +37,6 @@ public class House {
     public House() {
 
     }
-
-    public String getHouseId() {return houseId;}
 
     public void setHouseId(String houseId) {this.houseId = houseId;}
 
