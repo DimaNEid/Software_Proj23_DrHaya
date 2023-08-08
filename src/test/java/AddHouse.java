@@ -2,7 +2,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.example.House;
-import org.example.Residence;
 import org.example.ServiceMethod;
 
 import java.util.ArrayList;
@@ -22,11 +21,11 @@ public class AddHouse {
         rT = new House();
     }
 
-    private static ArrayList<House> rArrayTest = new ArrayList<House>();
+    private static final ArrayList<House> rArrayTest = new ArrayList<House>();
 
     void resInfo() {
         House ow = new House("501","50",  "2", "600" ,  "western" ,  2 ,  6);
-        resTest.houses.add(ow);
+        ServiceMethod.houses.add(ow);
         rArrayTest.add(ow);
     }
 

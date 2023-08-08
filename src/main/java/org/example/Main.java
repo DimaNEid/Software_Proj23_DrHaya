@@ -1,48 +1,47 @@
 package org.example;
+
 import java.util.Scanner;
-
-import static org.example.UserMethodReg.usersInfo;
-
+import java.util.logging.Logger;
 
 public class Main {
-
+    private static final Logger logger = Logger.getLogger(Main.class.getName());
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
 
 
-            System.out.println("\n Welcome to SakaNcom Application!");
-            System.out.println("----------------------------------");
-            System.out.println("|                                |");
-            System.out.println("|        1. Log In               |");
-            System.out.println("|        2. Sign Up              |");
-            System.out.println("|                                |");
-            System.out.println("----------------------------------\n");
+        logger.info("\n Welcome to SakaNcom Application!");
+        logger.info("----------------------------------");
+        logger.info("|                                |");
+        logger.info("|        1. Log In               |");
+        logger.info("|        2. Sign Up              |");
+        logger.info("|                                |");
+        logger.info("----------------------------------\n");
 
-            System.out.println("Enter Your Choice");
+        logger.info("Enter Your Choice");
             int choiceReg = scanner.nextInt();
 
 
             if (choiceReg == 1) {
 
-                    System.out.println("Log In Page");
+                logger.info("Log In Page");
 
-                    System.out.println("\n---------- Log In As ----------");
-                    System.out.println("|                                |");
-                    System.out.println("|        1. Owner                |");
-                    System.out.println("|        2. Admin                |");
-                    System.out.println("|        3. Tenant               |");
-                    System.out.println("|                                |");
-                    System.out.println("----------------------------------\n");
+                logger.info("\n---------- Log In As ----------");
+                logger.info("|                                |");
+                logger.info("|        1. Owner                |");
+                logger.info("|        2. Admin                |");
+                logger.info("|        3. Tenant               |");
+                logger.info("|                                |");
+                logger.info("----------------------------------\n");
 
-                    System.out.println("Enter Your Choice");
+                logger.info("Enter Your Choice");
                     int logUser = scanner.nextInt();
 
                     if (logUser == 1) {
-                        System.out.println("Enter Your Username");
+                        logger.info("Enter Your Username");
                         String u = String.valueOf(scanner.nextInt());
 
-                        System.out.println("Enter Your Password");
+                        logger.info("Enter Your Password");
                         String p = String.valueOf(scanner.nextInt());
 
                        // UserMethod.ownerLogin(u, p);
@@ -56,22 +55,20 @@ public class Main {
 
                                  ServiceMethod methodsObj = new ServiceMethod();
 
-                                int xO = 0;
+                                while (true) {
+                                    logger.info("Welcome Owner!");
+                                    logger.info("Please choose one of the following: ");
 
-                                while (xO != 1) {
-                                    System.out.println("Welcome Owner!");
-                                    System.out.println("Please choose one of the following: ");
-
-                                    System.out.println("1. Add Your Information.");
-                                    System.out.println("2. Add Residence.");
-                                    System.out.println("3. View All Residences.");
-                                    System.out.println("4. Add House.");
-                                    System.out.println("5. View All House.");
-                                    System.out.println("6. Control Panel.");
-                                    System.out.println("7. Update House Information.");
-                                    System.out.println("8. Update Residence Information.");
-                                    System.out.println("9. Check The tenants for a certain house");
-                                    System.out.println("10. Check Number Of Communication");
+                                    logger.info("1. Add Your Information.");
+                                    logger.info("2. Add Residence.");
+                                    logger.info("3. View All Residences.");
+                                    logger.info("4. Add House.");
+                                    logger.info("5. View All House.");
+                                    logger.info("6. Control Panel.");
+                                    logger.info("7. Update House Information.");
+                                    logger.info("8. Update Residence Information.");
+                                    logger.info("9. Check The tenants for a certain house");
+                                    logger.info("10. Check Number Of Communication");
 
 
                                     int choice = menu_in.nextInt();
@@ -79,17 +76,17 @@ public class Main {
 
                                     if(choice == 1) {
 
-                                        System.out.println("Add Owner ID");
+                                        logger.info("Add Owner ID");
                                         String oii1 = scanner.nextLine();
 
 
-                                        System.out.println("Add Owner Name");
+                                        logger.info("Add Owner Name");
                                         String oii2 = scanner.nextLine();
 
-                                        System.out.println("Add Owner Phone");
+                                        logger.info("Add Owner Phone");
                                         String oii3 = scanner.nextLine();
 
-                                        System.out.println("Add Owner Address");
+                                        logger.info("Add Owner Address");
                                         String oii4 = scanner.nextLine();
 
                                         PersonsMethod.addOwner(oii1,oii2,oii3,oii4);
@@ -102,58 +99,58 @@ public class Main {
 
 
 
-                                            System.out.println("Add Resident ID");
-                                            String input1 = scanner.nextLine();
+                                        logger.info("Add Resident ID");
+                                        String input1 = scanner.nextLine();
 
 
-                                            System.out.println("Add your ID");
-                                            String input2 = scanner.nextLine();
+                                        logger.info("Add your ID");
+                                        String input2 = scanner.nextLine();
 
-                                            System.out.println("Add The resident location");
-                                            String input3 = scanner.nextLine();
+                                        logger.info("Add The resident location");
+                                        String input3 = scanner.nextLine();
 
-                                            System.out.println("Add The service you offer");
-                                            String input4 = scanner.nextLine();
+                                        logger.info("Add The service you offer");
+                                        String input4 = scanner.nextLine();
 
-                                            System.out.println("Add The Number Of Floors");
-                                            Integer input5 = Integer.valueOf(scanner.nextLine());
+                                        logger.info("Add The Number Of Floors");
+                                        Integer input5 = Integer.valueOf(scanner.nextLine());
 
-                                            System.out.println("Add The Number Of Houses");
-                                            Integer input6 = Integer.valueOf(scanner.nextLine());
+                                        logger.info("Add The Number Of Houses");
+                                        Integer input6 = Integer.valueOf(scanner.nextLine());
 
-                                            methodsObj.addResidence(input1, input2, input3, input5, input4, input6);
+                                         methodsObj.addResidence(input1, input2, input3, input5, input4, input6);
 
 
                                         } else if (choice == 3) {
 
-                                            System.out.println("All your Residences: ");
-                                            ServiceMethod.viewResidences();
+                                        logger.info("All your Residences: ");
+                                         ServiceMethod.viewResidences();
 
 
                                             /* for (int i = 0; i < residences.size(); i++) {System.out.println(residences.get(i).toString());}*/
 
                                         } else if (choice == 4) {
 
-                                            System.out.println("Add House ID");
-                                            String input1 = scanner.nextLine();
+                                        logger.info("Add House ID");
+                                        String input1 = scanner.nextLine();
 
-                                            System.out.println("Add The Resident ID that the house is located");
-                                            String input2 = scanner.nextLine();
+                                        logger.info("Add The Resident ID that the house is located");
+                                        String input2 = scanner.nextLine();
 
-                                            System.out.println("Add The Floor ID that the house is located");
-                                            String input3 = scanner.nextLine();
+                                        logger.info("Add The Floor ID that the house is located");
+                                        String input3 = scanner.nextLine();
 
-                                            System.out.println("Add The Monthly Rent");
-                                            String input4 = scanner.nextLine();
+                                        logger.info("Add The Monthly Rent");
+                                        String input4 = scanner.nextLine();
 
-                                            System.out.println("Add number of bathrooms ");
-                                            String input5 = scanner.nextLine();
+                                        logger.info("Add number of bathrooms ");
+                                        String input5 = scanner.nextLine();
 
-                                            System.out.println("Add number of bedrooms");
-                                            Integer input6 = Integer.valueOf(scanner.nextLine());
+                                        logger.info("Add number of bedrooms");
+                                        Integer input6 = Integer.valueOf(scanner.nextLine());
 
-                                            System.out.println("Add if there is a balcony");
-                                            Integer input7 = Integer.valueOf(scanner.nextLine());
+                                        logger.info("Add if there is a balcony");
+                                        Integer input7 = Integer.valueOf(scanner.nextLine());
 
 
                                             methodsObj.addHouse(input1, input2, input3, input4, input5, input6, input7);
@@ -161,31 +158,31 @@ public class Main {
 
                                         } else if (choice == 5) {
 
-                                            System.out.println("All your Houses: ");
-                                            ServiceMethod.viewHouses();
+                                        logger.info("All your Houses: ");
+                                        ServiceMethod.viewHouses();
 
                                             //for (int i = 0; i < houses.size(); i++) {System.out.println(houses.get(i).toString());}
 
 
                                         } else if (choice == 6) {
 
-                                            System.out.println("If You Would Like To Check The Control Panel");
-                                            ServiceMethod.viewResidenceID();
+                                        logger.info("If You Would Like To Check The Control Panel");
+                                        ServiceMethod.viewResidenceID();
 
                                             /*for (int i = 0; i < residences.size(); i++) {System.out.println(residences.get(i).getResidenceID()); }*/
 
-                                            System.out.println("Enter The Resident ID That You Would Like To See Its Details");
-                                            String s = scanner.nextLine();
-                                            System.out.println("Enter The Floor ID That You Would Like To See Its house");
-                                            String ss = scanner.nextLine();
+                                        logger.info("Enter The Resident ID That You Would Like To See Its Details");
+                                         String s = scanner.nextLine();
+                                        logger.info("Enter The Floor ID That You Would Like To See Its house");
+                                          String ss = scanner.nextLine();
 
                                           //  methodsObj.getHouseIdByResidentAndFloor(s, ss);
 
 
                                         } else if (choice == 7) {
                                            // ServiceMethod.updateHouse();
-                                        /*
 
+/*
                                                     System.out.println("Enter The house Id That You Would Like To Edit Its Information");
                                                     String i1 = scanner.nextLine();
 
@@ -244,16 +241,19 @@ public class Main {
                                                             hh.setBedroomsNum(Integer.valueOf(i7));
                                                             houses.add(hh);}
 
-                                                        */
+                                                        return str;
+
+                                                    }else {
+                                                        return str1;
+
+                                                    }
 
 
-
-
-
+*/
 
 
                                         } else if (choice == 8) {
-                                            ServiceMethod.updateResidence();
+
 
 
                                         } else if (choice == 9) {
@@ -280,7 +280,7 @@ public class Main {
 
                     else if (logUser == 2) {}
                     else if (logUser == 3) {}
-                    else {System.out.println("Enter Valid Input 1,2,3");}
+                    else {    logger.info("Enter Valid Input 1,2,3");}
 
 
 
@@ -288,38 +288,38 @@ public class Main {
             else if (choiceReg == 2) {
 
 
-                    System.out.println("Sign Up As: ");
+                logger.info("Sign Up As: ");
 
-                    System.out.println("\n---------- Sign Up Page ----------");
-                    System.out.println("|                                |");
-                    System.out.println("|        1. Owner   Account       |");
-                    System.out.println("|        2. Admin   Account       |");
-                    System.out.println("|        3. Tenant  Account       |");
-                    System.out.println("|                                |");
-                    System.out.println("----------------------------------\n");
+                logger.info("\n---------- Sign Up Page ----------");
+                logger.info("|                                 |");
+                logger.info("|        1. Owner   Account       |");
+                logger.info("|        2. Admin   Account       |");
+                logger.info("|        3. Tenant  Account       |");
+                logger.info("|                                 |");
+                logger.info("----------------------------------\n");
 
-                    System.out.println("Enter Your Choice");
+                logger.info("Enter Your Choice");
                     int signUser = scanner.nextInt();
 
                     if (signUser == 1) {
 
-                        System.out.println("Enter Your username");
+                        logger.info("Enter Your username");
                         String in1 = scanner.nextLine();
 
-                        System.out.println("Enter Your password");
+                        logger.info("Enter Your password");
                         String in2 = scanner.nextLine();
 
                        }
 
                     else if (signUser == 2) { }
                     else if (signUser == 3) { }
-                    else {System.out.println("Enter Valid Input 1,2,3");}
+                    else {    logger.info("Enter Valid Input 1,2,3");}
 
 
-            }/*2nd if Signup*/
+            }
 
 
-        }/*Main Method*/
+        }
 
-    }/*Main Class*/
+    }
 

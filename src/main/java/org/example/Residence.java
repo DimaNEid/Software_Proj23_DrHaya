@@ -9,25 +9,17 @@ public class Residence {
 
     }
 
-    public Integer getNumOfFloors(){return numOfFloors;}
     public void setNumOfFloors(Integer numOfFloors){this.numOfFloors=numOfFloors;}
 
     public String getResidenceID() {return residenceID;}
 
     public void setResidenceID(String residenceID) {this.residenceID = residenceID;}
 
-    public String getOwnerID() {return ownerID;}
-
     public void setOwnerID(String ownerID) {this.ownerID = ownerID;}
 
-    public String getLocation() {return location;}
-
     public void setLocation(String location) {this.location = location;}
-    public String getServices() {return services;}
 
     public void setServices(String services) {this.services = services;}
-
-    public Integer getNumOfHouses() {return numOfHouses;}
 
     public void setNumOfHouses(Integer numOfHouses) {this.numOfHouses = numOfHouses;}
 

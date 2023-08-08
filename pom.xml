@@ -12,6 +12,12 @@
         <maven.compiler.source>20</maven.compiler.source>
         <maven.compiler.target>20</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+
+        <properties>
+            <sonar.organization>dimaneid</sonar.organization>
+            <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        </properties>
     </properties>
 
     <dependencies>
@@ -48,6 +54,8 @@
             <artifactId>javax.mail</artifactId>
             <version>1.6.2</version>
         </dependency>
+
+
 
     </dependencies>
 

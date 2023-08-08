@@ -1,45 +1,45 @@
 package org.example;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class UserMethodReg {
+
+    private static final Logger logger = Logger.getLogger(UserMethodReg.class.getName());
 
     public static List<UserInfo> usersInfo = new ArrayList<>();
     static UserInfo ui = new UserInfo();
 
     public static boolean userSignUpCheck(String u, String p) {
 
-        for (int i = 0; i < usersInfo.size(); i++) {
-            if (u.equals(usersInfo.get(i).getUsername()) || p.equals(usersInfo.get(i).getPassword()) ){
-                System.out.println("Enter Valid Information");
+        for (UserInfo userInfo : usersInfo) {
+            if (u.equals(userInfo.getUsername()) || p.equals(userInfo.getPassword())) {
+                logger.info("Enter Valid Information");
 
-                return false;
-
-            }
+                return false;}
         }
 
-        System.out.println("Signed Up Successfully");
+        logger.info("Signed Up Successfully");
         addUser(u,p);
             return true;
 
     }
-    public static boolean addUser(String u, String p){
+
+    public static void addUser(String u, String p){
         ui.setUsername(u);
         ui.setPassword(p);
         usersInfo.add(ui);
 
-        return true;
-
     }
+
     public static boolean userLoginCheck(String username, String password)  {
 
-        for(int i=0 ; i<usersInfo.size();i++){
-            if(username.equals(usersInfo.get(i).getUsername()) && password.equals(usersInfo.get(i).getPassword())){
-                System.out.println("Logged In Successfully");
+        for (UserInfo userInfo : usersInfo) {
+            if (username.equals(userInfo.getUsername()) && password.equals(userInfo.getPassword())) {
+                logger.info("Logged In Successfully");
 
-                return true;}
+                return true;
+            }
         }
         return false;
     }
