@@ -2,8 +2,13 @@ package org.example;
 
 public class House {
 
-    private String houseId, residenceId, floorId, monthlyRent,balcony;
-    private Integer  bathrooms, bedrooms;
+    private String houseId;
+    private String residenceId;
+    private String floorId;
+    private String monthlyRent;
+    private String balcony;
+    private Integer  bathrooms;
+    private Integer bedrooms;
 
     public House(String houseId, String residenceId, String floorId, String monthlyRent,String balcony, Integer bathrooms, Integer bedrooms) {
         this.houseId = houseId;
