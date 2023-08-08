@@ -49,7 +49,7 @@ public class Main {
 
                             if (loginStatus) {
 
-                                 Scanner menu_in = new Scanner(System.in);
+                                 Scanner menuIn = new Scanner(System.in);
 
                                  Scanner scanner = new Scanner(System.in);
 
@@ -69,8 +69,8 @@ public class Main {
                                     logger.info("8. Check Number Of Communication");
 
 
-                                    int choice = menu_in.nextInt();
-                                    menu_in.nextLine();
+                                    int choice = menuIn.nextInt();
+                                    menuIn.nextLine();
 
                                     if(choice == 1) {
 
