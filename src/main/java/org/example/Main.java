@@ -264,7 +264,7 @@ public class Main {
                                             System.out.println("Invalid Input Try One Of The Valid Choices 1,2,3,4,5,6,7");
                                         }
 
-
+                                       break;
                                 }
 
                             }
