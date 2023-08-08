@@ -5,13 +5,13 @@ import java.util.List;
 
 public class PersonsMethod {
 
-    public static List<Owner> owners = new ArrayList<>();
+    public static final List<Owner> owners = new ArrayList<>();
     static Owner oo = new Owner();
 
-    public static List<Tenant> tenants = new ArrayList<>();
+    public static final List<Tenant> tenants = new ArrayList<>();
     static Tenant tt = new Tenant();
 
-    public static List<Admin> admin = new ArrayList<>();
+    public static final List<Admin> admin = new ArrayList<>();
     static Admin aa = new Admin();
 
     public static boolean addOwner(String id, String name, String phone, String address) {
