@@ -10,10 +10,6 @@ public class ServiceMethod {
 
     private static final Logger logger = Logger.getLogger(ServiceMethod.class.getName());
 
-    public static Residence getRr() {
-        return rr;
-    }
-
     public static final List<Residence> residences = new ArrayList<>();
     static Residence rr = new Residence();
 
@@ -49,18 +45,10 @@ public class ServiceMethod {
 
 
     public static boolean viewResidences() {
-        boolean residencesViewed = false;
-        if ( !residences.isEmpty()) {
-            for (Residence residence : residences) {
-                logger.info(residence.toString());
-                residencesViewed = true;
-            }
-
-        } else {
-            logger.warning("Residences collection is null or empty");
-
+        for (Residence residence : residences) {
+            logger.info(residence.toString());
         }
-        return residencesViewed;
+        return true;
     }
 
 
