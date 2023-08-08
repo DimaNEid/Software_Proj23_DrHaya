@@ -46,7 +46,7 @@ public class ServiceMethod {
 
     public static boolean viewResidences() {
         for (Residence residence : residences) {
-            logger.info(residence.toString());
+            System.out.println(residence.toString());
         }
         return true;
     }
