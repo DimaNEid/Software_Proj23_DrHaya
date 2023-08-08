@@ -45,16 +45,17 @@ public class ServiceMethod {
 
 
     public static boolean viewResidences() {
-        if (residences != null) {
+        if (residences != null && !residences.isEmpty()) {
             for (Residence residence : residences) {
                 logger.info(residence.toString());
             }
             return true;
         } else {
-            logger.warning("Residences collection is null");
+            logger.warning("Residences collection is null or empty");
             return false;
         }
     }
+
 
     public static boolean viewResidenceID() {
 
