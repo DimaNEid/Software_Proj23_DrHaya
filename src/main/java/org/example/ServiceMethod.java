@@ -45,7 +45,7 @@ public class ServiceMethod {
 
 
     public static boolean viewResidences() {
-        if (residences != null && !residences.isEmpty()) {
+        if ( !residences.isEmpty()) {
             for (Residence residence : residences) {
                 logger.info(residence.toString());
             }
@@ -66,7 +66,7 @@ public class ServiceMethod {
     }
 
     public static boolean viewHouses() {
-        if (houses != null && !houses.isEmpty()) {
+        if ( !houses.isEmpty()) {
             for (House house : houses) {
                 logger.info(house.toString());
             }
